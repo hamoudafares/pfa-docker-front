@@ -1001,7 +1001,7 @@ __webpack_require__.r(__webpack_exports__);
 var ProfileComponent = /** @class */ (function () {
     function ProfileComponent() {
         this.avatarImgSrc = 'assets/images/avatar.jpg';
-        this.userName = 'User1';
+        this.userName = 'elastic';
         this.userPost = '';
     }
     ProfileComponent.prototype.ngOnInit = function () {
@@ -1921,7 +1921,7 @@ var PagesTopComponent = /** @class */ (function () {
     function PagesTopComponent(_globalService) {
         this._globalService = _globalService;
         this.avatarImgSrc = 'assets/images/avatar.jpg';
-        this.userName = 'User1';
+        this.userName = 'elastic';
         this.userPost = 'serverOn';
         this.sidebarToggle = true;
         this.tip = { ring: true, email: true };

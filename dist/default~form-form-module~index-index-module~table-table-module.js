@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <card cardTitle=\"My Projects\">\n      <button class=\"btn btn-warning\" (click)=\"newProject()\">Add Project </button>\n      <br>\n      <table class=\"table table-bordered table-hover\">\n        <thead>\n          <tr>\n            <th>Project name</th>\n            <th>Domain name</th>\n            <th>AGE</th>\n            <th>STATE</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let item of tableData | paginate: { id: 'pager', itemsPerPage: pageSize, currentPage: pageNumber};let index = index\">\n            <td>{{item.firstName}}</td>\n            <td>{{item.lastName}}</td>\n            <td>{{item.age}} days</td>\n            <td>\n              <span class=\"label label-success\">running</span>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n      <form class=\"pagination-wrapper\">\n        <div class=\"form-group pages\">\n          <pagination-controls class=\"my-pagination\" id=\"pager\" (pageChange)=\"pageChanged($event)\" maxSize=\"9\" directionLinks=\"true\"\n            autoHide=\"true\" previousLabel=\"Prev\" nextLabel=\"Next\" screenReaderPaginationLabel=\"Pagination\" screenReaderPageLabel=\"page\"\n            screenReaderCurrentLabel=\"You're on page\">\n          </pagination-controls>\n        </div>\n        <div class=\"form-group options pages\">\n          <div class=\"input-group input-group-sm\">\n            <select class=\"form-control\" name=\"pageChangedName\" [(ngModel)]=\"pageSize\" (ngModelChange)=\"loadData()\">\n              <option>1</option>\n              <option>5</option>\n              <option>10</option>\n              <option>20</option>\n              <option>50</option>\n              <option>100</option>\n              <option>200</option>\n            </select>\n            <span class=\"input-group-addon addon-right\">Per Page</span>\n          </div>\n        </div>\n      </form>\n    </card>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <card cardTitle=\"My Projects\">\n      <button class=\"btn btn-warning\" (click)=\"newProject()\">Add Project </button>\n      <br>\n      <table class=\"table table-bordered table-hover\">\n        <thead>\n          <tr>\n            <th>Project name</th>\n            <th>Website Link</th>\n            <th>Kibanna Link</th>\n            <th>AGE</th>\n            <th>STATE</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let item of tableData | paginate: { id: 'pager', itemsPerPage: pageSize, currentPage: pageNumber};let index = index\">\n            <td>{{item.firstName}}</td>\n            <td>http://{{item.lastName}}</td>\n            <td>http://kibanna.{{item.lastName}}</td>\n            <td>{{item.age}} days</td>\n            <td>\n              <span class=\"label label-success\">running</span>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n      <form class=\"pagination-wrapper\">\n        <div class=\"form-group pages\">\n          <pagination-controls class=\"my-pagination\" id=\"pager\" (pageChange)=\"pageChanged($event)\" maxSize=\"9\" directionLinks=\"true\"\n            autoHide=\"true\" previousLabel=\"Prev\" nextLabel=\"Next\" screenReaderPaginationLabel=\"Pagination\" screenReaderPageLabel=\"page\"\n            screenReaderCurrentLabel=\"You're on page\">\n          </pagination-controls>\n        </div>\n        <div class=\"form-group options pages\">\n          <div class=\"input-group input-group-sm\">\n            <select class=\"form-control\" name=\"pageChangedName\" [(ngModel)]=\"pageSize\" (ngModelChange)=\"loadData()\">\n              <option>1</option>\n              <option>5</option>\n              <option>10</option>\n              <option>20</option>\n              <option>50</option>\n              <option>100</option>\n              <option>200</option>\n            </select>\n            <span class=\"input-group-addon addon-right\">Per Page</span>\n          </div>\n        </div>\n      </form>\n    </card>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -132,7 +132,7 @@ var TablesDataService = /** @class */ (function () {
             {
                 id: 1,
                 firstName: 'chat app',
-                lastName: 'chat',
+                lastName: 'chat.serveron.xyz',
                 username: '@mdo',
                 email: 'mdo@gmail.com',
                 age: '28'
@@ -140,7 +140,7 @@ var TablesDataService = /** @class */ (function () {
             {
                 id: 2,
                 firstName: 'Ecommerce',
-                lastName: 'shopify',
+                lastName: 'shopify.serveron.xyz',
                 username: '@fat',
                 email: 'fat@yandex.ru',
                 age: '45'
@@ -148,7 +148,7 @@ var TablesDataService = /** @class */ (function () {
             {
                 id: 3,
                 firstName: 'Bank app',
-                lastName: 'biat',
+                lastName: 'biat.serveron.xyz',
                 username: '@twitter',
                 email: 'twitter@outlook.com',
                 age: '18'
